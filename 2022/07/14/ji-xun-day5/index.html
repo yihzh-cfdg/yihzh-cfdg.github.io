@@ -457,7 +457,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="集训Day5"><a href="#集训Day5" class="headerlink" title="集训Day5"></a>集训Day5</h1><h2 id="二分图最大匹配"><a href="#二分图最大匹配" class="headerlink" title="二分图最大匹配"></a>二分图最大匹配</h2><p>常用的二分图匹配算法是匈牙利算法，其正确性基于 hall 定理，本质是不断寻找增广路来扩大匹配数。但是其正确性证明比较复杂，在此略去。</p>
+                <h1 id="二分图最大匹配"><a href="#二分图最大匹配" class="headerlink" title="二分图最大匹配"></a>二分图最大匹配</h1><p>常用的二分图匹配算法是匈牙利算法，其正确性基于 hall 定理，本质是不断寻找增广路来扩大匹配数。但是其正确性证明比较复杂，在此略去。</p>
 <p>匈牙利算法的过程是，枚举每一个左部点 u<em>u</em> ，然后枚举该左部点连出的边，对于一个出点 v<em>v</em>，如果它没有被先前的左部点匹配，那么直接将 u<em>u</em> 匹配 v<em>v</em>，否则尝试让 v<em>v</em> 的“原配”左部点去匹配其他右部点，如果“原配”匹配到了其他点，那么将 u<em>u</em> 匹配 v<em>v</em>，否则 u<em>u</em> 失配。</p>
 <p>简而言之：</p>
 <ol>
@@ -485,13 +485,13 @@
 
 
 
-<h2 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h2><p>拓扑排序要解决的问题是给一个图的所有节点排序。</p>
+<h1 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h1><p>拓扑排序要解决的问题是给一个图的所有节点排序。</p>
 <p>比如学习课程中有：高数，线性代数，离散数学，概率论，语言基础，算法导论，机器学习。当我们想要学习 算法导论 的时候，就必须先学会 离散数学和概率论，不然在课堂就会听的一脸懵逼。这些课程就相当于几个顶点<code>u</code> , 顶点之间的有向边<code>（u，v）</code>就相当于学习课程的顺序。拓扑排序就是把正确的顺序找出来。</p>
 <p>但是如果某一天排课的老师打瞌睡了，说想要学习算法导论，还得先学机器学习，而机器学习的前置课程又是算法导论，然后你就一万脸懵逼了，我到底应该先学哪一个？当然我们在这里不考虑什么同时学几个课程的情况。在这里，算法导论和机器学习间就出现了一个环，显然你现在没办法弄清楚你需要学什么了，于是你也没办法进行拓扑排序了。因而如果有向图中存在环路，那么就没办法进行拓扑排序。</p>
 <p>因此在一个DAG中，我们将图中的顶点以线性方式进行排序，使得对于任何的顶点<code>u</code>到<code>v</code>的有向边<code>（u，v）</code> , 都可以有<code>u</code>在<code>v</code>的前面。、</p>
 <p>还有给定一个 DAG，如果从<code>u</code>到<code>v</code>有边<code>（u，v）</code>，则认为<code>u</code>依赖于<code>v</code>。如果<code>u</code>到<code>v</code>有路径，则称<code>u</code>间接依赖于<code>v</code>。</p>
 <p>拓扑排序的目标是将所有节点排序，使得排在前面的节点不能依赖于排在后面的节点。这样对前面的节点操作完，操作后面的节点的时候（比如DP求值），不会影响到前面已经决定的点。</p>
-<h3 id="Kahn-算法"><a href="#Kahn-算法" class="headerlink" title="Kahn 算法"></a>Kahn 算法</h3><p>初始情况下有一个空队列<code>L</code>，和一个集合<code>S</code>装着所有入度为0的点</p>
+<h2 id="Kahn-算法"><a href="#Kahn-算法" class="headerlink" title="Kahn 算法"></a>Kahn 算法</h2><p>初始情况下有一个空队列<code>L</code>，和一个集合<code>S</code>装着所有入度为0的点</p>
 <p>每次从集合中取出一个点<code>u</code>（可以随便取）放入<code>L</code>, 然后将<code>u</code>的所有边删除。对于边<code>(u,v)</code>，若将该边删除后点’<code>u</code>‘的入度变为0，则将<code>v</code>放入<code>S</code>中。</p>
 <p>不断重复以上过程，直到集合为空。检查图中是否存在任何边，如果有，那么这个图一定有环路，否则<code>L</code>中顶点的顺序就是拓扑排序的结果。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">topu</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//拓扑排序</span>
@@ -515,7 +515,7 @@
 
 
 
-<h2 id="Tarjan"><a href="#Tarjan" class="headerlink" title="Tarjan"></a>Tarjan</h2><p>Tarjan由DFS引出，用于在无向图中求割点与桥，进一步得到双连通分量。或者在有向图里求强连通分量、必经点和必经边。</p>
+<h1 id="Tarjan"><a href="#Tarjan" class="headerlink" title="Tarjan"></a>Tarjan</h1><p>Tarjan由DFS引出，用于在无向图中求割点与桥，进一步得到双连通分量。或者在有向图里求强连通分量、必经点和必经边。</p>
 <p>Tarjan的核心部分包括维护两个数组：<code>dfsn</code>/<code>dfn</code>和<code>low</code>，其中<code>dfn</code>数组表示经过几次dfs到达这个点，也可以理解为dfs的“时间戳”。</p>
 <p><code>low</code>代表这个节点可以访问到的时间戳的最小值。</p>
 <p>举个例子：一个人在走迷宫，迷宫分为很多个房间。这个人每到一个房间，就在地板上写两行时间：第一行是到达房间的时间，第二行是这个房间走能到达的最前面的房间的时间。</p>
@@ -557,7 +557,7 @@ stack<span class="token operator">&lt;</span><span class="token keyword">int</sp
 
 
 
-<h2 id="缩点"><a href="#缩点" class="headerlink" title="缩点"></a>缩点</h2><p>前置知识：Tarjan判断强连通分量+DAG上DP</p>
+<h1 id="缩点"><a href="#缩点" class="headerlink" title="缩点"></a>缩点</h1><p>前置知识：Tarjan判断强连通分量+DAG上DP</p>
 <p>求出强连通分量后，可以把一个环看作是一个点，这个点的点权就是环上的点的点权之和，这样就能把有向有环图变成有向无环图，从而可以进行DP等操作。</p>
 <p>P3387这道题要求求出点权最大值，要缩点之后做拓扑排序，然后再DP求最大值</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">if</span> <span class="token punctuation">(</span>dfn<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">==</span> low<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -588,7 +588,7 @@ stack<span class="token operator">&lt;</span><span class="token keyword">int</sp
 
 
 
-<h2 id="割点"><a href="#割点" class="headerlink" title="割点"></a>割点</h2><p>割点比缩点好做一些，在无向图上找割点就是跑tarjan，如果一个点不是根节点，而且存在一个子节点y，满足<code>dfn[x]&lt;=low[y]</code>，那么它就是就是割点；如果是根节点，那么这个点要有两个以上的子节点满足这个条件，它才是割点。</p>
+<h1 id="割点"><a href="#割点" class="headerlink" title="割点"></a>割点</h1><p>割点比缩点好做一些，在无向图上找割点就是跑tarjan，如果一个点不是根节点，而且存在一个子节点y，满足<code>dfn[x]&lt;=low[y]</code>，那么它就是就是割点；如果是根节点，那么这个点要有两个以上的子节点满足这个条件，它才是割点。</p>
 <p>怎么理解呢？要先从割边（桥）开始，如果<code>dfn[x] &lt; low[y]</code>，那么说明从y的子树中的任何一个点除法，在不从<code>(x,y)</code>这条边走的前提下，不管走哪条边都不能到达x或者比x更早的节点，那就说明y的子树就像麻袋蒙头把自己包起来了，只能在里面绕来绕去出不去，因此<code>(x,y)</code>就是桥。然后如果一个点到两个子节点的边都是桥，那这个点一定是割点。这就是从根节点来看的结论。如果不是根节点，但凡它连出去的边是一座桥，那它就一定是割点（什么张飞。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">tarjan</span><span class="token punctuation">(</span><span class="token keyword">int</span> u<span class="token punctuation">,</span> <span class="token keyword">int</span> fa<span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -1021,7 +1021,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">75.8k</span>
+                        class="white-color">78.3k</span>
             
             
             

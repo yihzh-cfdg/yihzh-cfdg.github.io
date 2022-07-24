@@ -457,7 +457,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="集训Day3"><a href="#集训Day3" class="headerlink" title="集训Day3"></a>集训Day3</h1><h2 id="Codeforces-Round-799-Div-4"><a href="#Codeforces-Round-799-Div-4" class="headerlink" title="Codeforces Round #799 (Div. 4)"></a>Codeforces Round #799 (Div. 4)</h2><h3 id="A-Marathon"><a href="#A-Marathon" class="headerlink" title="A. Marathon"></a>A. Marathon</h3><h3 id="B-All-Distinct"><a href="#B-All-Distinct" class="headerlink" title="B. All Distinct"></a>B. All Distinct</h3><h3 id="C-Where’s-the-Bishop"><a href="#C-Where’s-the-Bishop" class="headerlink" title="C. Where’s the Bishop?"></a>C. Where’s the Bishop?</h3><h3 id="D-The-Clock"><a href="#D-The-Clock" class="headerlink" title="D. The Clock"></a>D. The Clock</h3><h3 id="E-Binary-Deque"><a href="#E-Binary-Deque" class="headerlink" title="E. Binary Deque"></a>E. Binary Deque</h3><h3 id="F-3SUM"><a href="#F-3SUM" class="headerlink" title="F. 3SUM"></a>F. 3SUM</h3><h3 id="G-2-Sort"><a href="#G-2-Sort" class="headerlink" title="G. 2^Sort"></a>G. 2^Sort</h3><h3 id="H-Gambling"><a href="#H-Gambling" class="headerlink" title="H. Gambling"></a>H. Gambling</h3><h2 id="单源最短路"><a href="#单源最短路" class="headerlink" title="单源最短路"></a>单源最短路</h2><h3 id="SPFA"><a href="#SPFA" class="headerlink" title="SPFA"></a>SPFA</h3><p>用队列优化过的 Bellman-Flord 算法，很容易被卡数据</p>
+                <h1 id="Codeforces-Round-799-Div-4"><a href="#Codeforces-Round-799-Div-4" class="headerlink" title="Codeforces Round #799 (Div. 4)"></a>Codeforces Round #799 (Div. 4)</h1><h2 id="A-Marathon"><a href="#A-Marathon" class="headerlink" title="A. Marathon"></a>A. Marathon</h2><h2 id="B-All-Distinct"><a href="#B-All-Distinct" class="headerlink" title="B. All Distinct"></a>B. All Distinct</h2><h2 id="C-Where’s-the-Bishop"><a href="#C-Where’s-the-Bishop" class="headerlink" title="C. Where’s the Bishop?"></a>C. Where’s the Bishop?</h2><h2 id="D-The-Clock"><a href="#D-The-Clock" class="headerlink" title="D. The Clock"></a>D. The Clock</h2><h2 id="E-Binary-Deque"><a href="#E-Binary-Deque" class="headerlink" title="E. Binary Deque"></a>E. Binary Deque</h2><h2 id="F-3SUM"><a href="#F-3SUM" class="headerlink" title="F. 3SUM"></a>F. 3SUM</h2><h2 id="G-2-Sort"><a href="#G-2-Sort" class="headerlink" title="G. 2^Sort"></a>G. 2^Sort</h2><h2 id="H-Gambling"><a href="#H-Gambling" class="headerlink" title="H. Gambling"></a>H. Gambling</h2><h1 id="单源最短路"><a href="#单源最短路" class="headerlink" title="单源最短路"></a>单源最短路</h1><h2 id="SPFA"><a href="#SPFA" class="headerlink" title="SPFA"></a>SPFA</h2><p>用队列优化过的 Bellman-Flord 算法，很容易被卡数据</p>
 <p>先介绍一下Bellman-Flord，最重要的一个概念叫“松弛”，意思是如果一个点A经过一个中间点K到达另一个点B的距离比A直接到B的距离更短的话，就选择前者。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> k<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>k<span class="token operator">&lt;=</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span>
 	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
@@ -516,7 +516,7 @@
 
 
 
-<h3 id="迪杰斯特拉"><a href="#迪杰斯特拉" class="headerlink" title="迪杰斯特拉"></a>迪杰斯特拉</h3><p>SPFA算法在极限情况下复杂度达到了O(NM)，还是选用更稳定的<code>Dijkstra</code>算法吧家人们，堆优化后的<code>Dijkstra</code>算法的平均复杂度是O((n+m)logn)，稠密图很好用。<strong>Dijkstra</strong>本质上的思想是贪心,它只适用于不含负权边的图。</p>
+<h2 id="迪杰斯特拉"><a href="#迪杰斯特拉" class="headerlink" title="迪杰斯特拉"></a>迪杰斯特拉</h2><p>SPFA算法在极限情况下复杂度达到了O(NM)，还是选用更稳定的<code>Dijkstra</code>算法吧家人们，堆优化后的<code>Dijkstra</code>算法的平均复杂度是O((n+m)logn)，稠密图很好用。<strong>Dijkstra</strong>本质上的思想是贪心,它只适用于不含负权边的图。</p>
 <p>Dijkstra的流程如下:</p>
 <ol>
 <li><p>初始化dis[start] = 0, 其余节点的dis值为无穷大</p>
@@ -961,7 +961,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">75.8k</span>
+                        class="white-color">78.3k</span>
             
             
             

@@ -457,9 +457,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="集训Day2"><a href="#集训Day2" class="headerlink" title="集训Day2"></a>集训Day2</h1><h2 id="Codeforces-Round-805-Div-3"><a href="#Codeforces-Round-805-Div-3" class="headerlink" title="Codeforces Round #805 (Div. 3)"></a>Codeforces Round #805 (Div. 3)</h2><p>第一次打比赛，做了三题，没把第三题写出来，遗憾，后来才知道可以用map这类stl存状态</p>
+                <h1 id="Codeforces-Round-805-Div-3"><a href="#Codeforces-Round-805-Div-3" class="headerlink" title="Codeforces Round #805 (Div. 3)"></a>Codeforces Round #805 (Div. 3)</h1><p>第一次打比赛，做了三题，没把第三题写出来，遗憾，后来才知道可以用map这类stl存状态</p>
 <p>希望多加点分嘻嘻</p>
-<h3 id="A-Round-Down-the-Price"><a href="#A-Round-Down-the-Price" class="headerlink" title="A. Round Down the Price"></a>A. Round Down the Price</h3><p><img src="%5Cimages%5C1702A.jpg" alt="1702A"></p>
+<h2 id="A-Round-Down-the-Price"><a href="#A-Round-Down-the-Price" class="headerlink" title="A. Round Down the Price"></a>A. Round Down the Price</h2><p><img src="%5Cimages%5C1702A.jpg" alt="1702A"></p>
 <p>取个log再减一下就行</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> a<span class="token punctuation">;</span>
 cin <span class="token operator">>></span> a<span class="token punctuation">;</span>
@@ -468,7 +468,7 @@ cout <span class="token operator">&lt;&lt;</span> fixed <span class="token opera
 
 
 
-<h3 id="B-Polycarp-Writes-a-String-from-Memory"><a href="#B-Polycarp-Writes-a-String-from-Memory" class="headerlink" title="B. Polycarp Writes a String from Memory"></a>B. Polycarp Writes a String from Memory</h3><p><img src="%5Cimages%5C1702B.jpg" alt="1702B"></p>
+<h2 id="B-Polycarp-Writes-a-String-from-Memory"><a href="#B-Polycarp-Writes-a-String-from-Memory" class="headerlink" title="B. Polycarp Writes a String from Memory"></a>B. Polycarp Writes a String from Memory</h2><p><img src="%5Cimages%5C1702B.jpg" alt="1702B"></p>
 <p>每读一个字母就看存没存在memory里面，如果存满了就要到第二天</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> day <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 cin <span class="token operator">>></span> str<span class="token punctuation">;</span>
@@ -490,7 +490,7 @@ cout <span class="token operator">&lt;&lt;</span> day <span class="token operato
 
 
 
-<h3 id="C-Train-and-Queries"><a href="#C-Train-and-Queries" class="headerlink" title="C. Train and Queries"></a>C. Train and Queries</h3><p><img src="%5Cimages%5C1702C.jpg" alt="1702C"></p>
+<h2 id="C-Train-and-Queries"><a href="#C-Train-and-Queries" class="headerlink" title="C. Train and Queries"></a>C. Train and Queries</h2><p><img src="%5Cimages%5C1702C.jpg" alt="1702C"></p>
 <p>具体来说就是用map存某个数第一次出现的位置和最后一次出现的位置，如果a第一次出现的位置小于b最后一次出现的位置，那么a到b就是可到达的，然而我比赛的时候还不知道可以用map来存（在离结束还有五分钟的时候才知道），too young too simple</p>
 <p>并且这道题还要判断存不存在，因为map里面不存在也是0，如果0被当成第一次出现的位置就会wa，比赛的时候也没注意到这个问题，连续wa了七发！ sometimes naive！！</p>
 <blockquote>
@@ -529,7 +529,7 @@ cout <span class="token operator">&lt;&lt;</span> day <span class="token operato
 
 
 
-<h3 id="D-Not-a-Cheap-String"><a href="#D-Not-a-Cheap-String" class="headerlink" title="D. Not a Cheap String"></a>D. Not a Cheap String</h3><p><img src="%5Cimages%5C1702D.jpg" alt="1702D"></p>
+<h2 id="D-Not-a-Cheap-String"><a href="#D-Not-a-Cheap-String" class="headerlink" title="D. Not a Cheap String"></a>D. Not a Cheap String</h2><p><img src="%5Cimages%5C1702D.jpg" alt="1702D"></p>
 <p>这题和c差不多，按照字符的价值给每个字符排序，再记住编号（用桶装也可以），从大到小减就完事了</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">CHAR</span>
 <span class="token punctuation">&#123;</span>
@@ -583,7 +583,7 @@ cout <span class="token operator">&lt;&lt;</span> day <span class="token operato
 
 
 
-<h3 id="E-Split-Into-Two-Sets"><a href="#E-Split-Into-Two-Sets" class="headerlink" title="E. Split Into Two Sets"></a>E. Split Into Two Sets</h3><p><img src="%5Cimages%5C1702E.jpg" alt="1702E"></p>
+<h2 id="E-Split-Into-Two-Sets"><a href="#E-Split-Into-Two-Sets" class="headerlink" title="E. Split Into Two Sets"></a>E. Split Into Two Sets</h2><p><img src="%5Cimages%5C1702E.jpg" alt="1702E"></p>
 <p>题目都说的很清楚了，二分图染色嘛（可惜我比赛的时候还不知道）</p>
 <p>首先，一个数字最多只能出现两次，所以用桶装起来，如果大于两次就return，然后以每个数字为节点建无向图，如果能黑白染色，那就说明可以分到两个set里面。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> graph<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">,</span> buc<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -653,7 +653,7 @@ cout <span class="token operator">&lt;&lt;</span> day <span class="token operato
 
 
 
-<h3 id="F-Equate-Multisets"><a href="#F-Equate-Multisets" class="headerlink" title="F. Equate Multisets"></a>F. Equate Multisets</h3><p><img src="%5Cimages%5C1702F.jpg" alt="1702F"></p>
+<h2 id="F-Equate-Multisets"><a href="#F-Equate-Multisets" class="headerlink" title="F. Equate Multisets"></a>F. Equate Multisets</h2><p><img src="%5Cimages%5C1702F.jpg" alt="1702F"></p>
 <p>题面上说的乘二除二其实就是二进制的左移右移运算，由于可以做任意次数运算，所以多余的0可以在输入的时候去掉（例如，110000等价于11），然后再用桶（又是他！）存起来，由于把所有0都去掉了，左移只会增加0，所以真正有用的操作是右移，想把b数组变成a数组，只要排序之后从小到大看<code>b[i]</code>能否在左移<code>n</code>次后变成<code>a[i]</code>中的元素，遍历即可。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> b<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> n<span class="token punctuation">;</span>
@@ -694,10 +694,10 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
 
 
 
-<h3 id="G1-Passable-Paths-easy-version"><a href="#G1-Passable-Paths-easy-version" class="headerlink" title="G1. Passable Paths (easy version)"></a>G1. Passable Paths (easy version)</h3><p><img src="%5Cimages%5C1702G1.jpg" alt="1702G1"></p>
+<h2 id="G1-Passable-Paths-easy-version"><a href="#G1-Passable-Paths-easy-version" class="headerlink" title="G1. Passable Paths (easy version)"></a>G1. Passable Paths (easy version)</h2><p><img src="%5Cimages%5C1702G1.jpg" alt="1702G1"></p>
 <p>拿一棵树出来，问你能否走完一个集合内的点，一个思路是找到他们深度最小的lca，然后看lca的祖先中有没有集合中的点，如果有，那么就不能一次走完（也就是有某一个点分出了三条岔路），但是没有代码实现</p>
 <p>放一下大佬的题解：<a target="_blank" rel="noopener" href="https://codeforces.ml/contest/1702/submission/163612828">https://codeforces.ml/contest/1702/submission/163612828</a></p>
-<h2 id="STL-Map"><a href="#STL-Map" class="headerlink" title="STL Map"></a>STL Map</h2><p>map是STL中的一个关联容器，和python中的数据类型字典一样，map 类型变量中的元素也是由键-值对组成，没有重复的键。其底层实现是红黑树（非严格意义上的平衡二叉树）</p>
+<h1 id="STL-Map"><a href="#STL-Map" class="headerlink" title="STL Map"></a>STL Map</h1><p>map是STL中的一个关联容器，和python中的数据类型字典一样，map 类型变量中的元素也是由键-值对组成，没有重复的键。其底层实现是红黑树（非严格意义上的平衡二叉树）</p>
 <p>CRUD：</p>
 <ol>
 <li>声明</li>
@@ -741,7 +741,7 @@ it <span class="token operator">=</span> student<span class="token punctuation">
 
 
 
-<h2 id="STL-Set"><a href="#STL-Set" class="headerlink" title="STL Set"></a>STL Set</h2><p>set是<strong>内部自动有序</strong>且<strong>不含重复元素</strong>的容器</p>
+<h1 id="STL-Set"><a href="#STL-Set" class="headerlink" title="STL Set"></a>STL Set</h1><p>set是<strong>内部自动有序</strong>且<strong>不含重复元素</strong>的容器</p>
 <p>set中的函数：大部分是通用接口， set内部自动从大到小排序，可以根据定义的时候传入排序函数更改排序方式，重载小于号或者括号或者写一个cmp函数都可以</p>
 <p>begin、end、clear、empty、size、rbegin、rend</p>
 <p>max_size，返回set容器可能包含的元素最大个数</p>
@@ -753,8 +753,8 @@ it <span class="token operator">=</span> student<span class="token punctuation">
 <p>erase(key_value),删除键值key_value的值</p>
 <p><strong>lower_bound(key_value)</strong> ，返回第一个大于等于key_value的迭代器</p>
 <p><strong>upper_bound(key_value)，</strong> 返回最后一个大于等于key_value的迭代器</p>
-<h2 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h2><h3 id="Prim算法"><a href="#Prim算法" class="headerlink" title="Prim算法"></a>Prim算法</h3><p>用链式前向星实现</p>
-<h3 id="Kruskal算法"><a href="#Kruskal算法" class="headerlink" title="Kruskal算法"></a>Kruskal算法</h3><p>贪心选边：</p>
+<h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><h2 id="Prim算法"><a href="#Prim算法" class="headerlink" title="Prim算法"></a>Prim算法</h2><p>用链式前向星实现</p>
+<h2 id="Kruskal算法"><a href="#Kruskal算法" class="headerlink" title="Kruskal算法"></a>Kruskal算法</h2><p>贪心选边：</p>
 <p>① 将边按照边权从<strong>小到大</strong>排序，并建立一个没有边的图T。</p>
 <p>② 选出一条没有被选过的边权最小的边。</p>
 <p>③ 如果这条边两个顶点在T中所在的连通块不相同，那么将它加入图T， 相同就跳过。</p>
@@ -818,7 +818,7 @@ it <span class="token operator">=</span> student<span class="token punctuation">
 
 
 
-<h2 id="链式前向星（静态邻接表）"><a href="#链式前向星（静态邻接表）" class="headerlink" title="链式前向星（静态邻接表）"></a>链式前向星（静态邻接表）</h2><p>建立这样的结构体：</p>
+<h1 id="链式前向星（静态邻接表）"><a href="#链式前向星（静态邻接表）" class="headerlink" title="链式前向星（静态邻接表）"></a>链式前向星（静态邻接表）</h1><p>建立这样的结构体：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">Edge</span>
 <span class="token punctuation">&#123;</span>
      <span class="token keyword">int</span> next<span class="token punctuation">;</span>
@@ -1330,7 +1330,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">75.8k</span>
+                        class="white-color">78.3k</span>
             
             
             
