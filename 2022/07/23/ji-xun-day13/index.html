@@ -499,7 +499,7 @@
 <span class="token punctuation">&#123;</span>
     tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span>l<span class="token punctuation">,</span> r<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span>l <span class="token operator">==</span> r<span class="token punctuation">)</span> <span class="token comment">// 到叶子节点了</span>
-    	tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span>sum <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    	tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span>sum <span class="token operator">=</span> a<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">;</span>
    	<span class="token keyword">else</span>
     <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
@@ -564,7 +564,7 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>好，这样模板就写完了，下面来做一道题吧！</p>
-<p><img src="%5Cimages%5CCH4301.jpg" alt="CH4301"></p>
+<p><img src="/images/CH4301.jpg" alt="CH4301"></p>
 <p>G！</p>
 <h1 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h1><p>顺便也写一下树状数组的操作</p>
 <h2 id="lowbit"><a href="#lowbit" class="headerlink" title="lowbit"></a>lowbit</h2><p>树状数组比线段树好写多了，因为它没什么变体，就是单点修改，区间查询，最核心的操作应该就是<code>lowbit</code>。</p>
