@@ -549,6 +549,18 @@ categories:
 <h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><pre class="line-numbers language-none"><code class="language-none">hexo g &amp; hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>g</strong> for generate, <strong>d</strong> for deploy</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>由于过于摸鱼，更新时间过于久远，我的本地证书过期了</p>
+<p>于是push的时候会提示：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Unable to access <span class="token string">'https://github.com/xxx/xxx.git/'</span><span class="token builtin class-name">:</span> SSL certificate problem: unable to get <span class="token builtin class-name">local</span> issuer certificate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个错误通常表示Git无法验证GitHub的SSL证书，因为缺少本地颁发机构（CA）的根证书。</p>
+<p>解决方法：</p>
+<ol>
+<li>更新Git的CA证书：下载最新的CA根证书列表，并将其添加到Git的证书存储中。从以下网址获取最新的Mozilla CA证书列表：<a target="_blank" rel="noopener" href="https://curl.se/ca/cacert.pem">https://curl.se/ca/cacert.pem</a></li>
+<li>将该文件移动到 Git 安装目录的 “mingw64\ssl\certs” 文件夹内。</li>
+<li>运行以下命令，将全局配置项 http.sslCAInfo 设置为新的证书路径：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global http.sslCAInfo <span class="token string">"C:\Program Files\Git\mingw64\ssl<span class="token entity" title="\c">\c</span>erts<span class="token entity" title="\c">\c</span>acert.pem"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>
@@ -697,7 +709,7 @@ categories:
                 <div class="card-action article-tags">
                     
                     <a href="/tags/C/">
-                        <span class="chip bg-color">-C</span>
+                        <span class="chip bg-color">C</span>
                     </a>
                     
                 </div>
@@ -947,7 +959,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">95k</span>
+                        class="white-color">95.2k</span>
             
             
             

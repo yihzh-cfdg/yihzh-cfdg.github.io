@@ -409,7 +409,7 @@
                     <div class="article-tag">
                         
                             <a href="/tags/C/">
-                                <span class="chip bg-color">-C</span>
+                                <span class="chip bg-color">C</span>
                             </a>
                         
                     </div>
@@ -457,7 +457,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h1><p><img src="/images/socket.png" alt="img"></p>
+                <h1 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h1><p><img src="/images/socket.png" alt="Socket通信流程"></p>
 <ul>
 <li>服务端这边首先创建一个Socket<code>Socket()</code>，然后绑定IP地址和端口号<code>Bind()</code>，之后注册监听<code>Listen()</code>，这样服务端就可以监听指定的Socket地址了；</li>
 <li>客户端这边也创建一个Socket<code>Socket()</code>并打开，然后根据服务器IP地址和端口号向服务器Socket发送连接请求<code>Connect()</code>；</li>
@@ -638,7 +638,7 @@ server_addr<span class="token punctuation">.</span>sin_port <span class="token o
 
 <p>从套接字 fd 中读取 nbytes 个字节并保存到缓冲区 buf</p>
 <p>此时客户端和服务端之间就可以发送信息了</p>
-<p><img src="/image/linux_cs_1.png"></p>
+<p><img src="/image/linux_cs_1.png" alt="图2"></p>
 <h2 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h2><p>还需要写一个界面，这里用简单的命令行实现：</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">net_disk_ui</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -699,6 +699,7 @@ server_addr<span class="token punctuation">.</span>sin_port <span class="token o
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>在客户端和服务器框架搭建完成的情况下，就要对网盘的具体业务进行开发了。</p>
+<p><img src="/image/linux_cs_2.png" alt="图2"></p>
 <h3 id="占用ip"><a href="#占用ip" class="headerlink" title="占用ip"></a>占用ip</h3><p>如果服务器程序退出之后，又打开服务器程序，系统会提示Address already in use</p>
 <p>这是因为ip地址和端口号是系统资源，必须把它设置为端口号可以重复使用：</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> opt_value<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
@@ -855,7 +856,7 @@ server_addr<span class="token punctuation">.</span>sin_port <span class="token o
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这样就迈出了实现功能1的第一步</p>
-<p><img src="/image/linux_cs_3.png"></p>
+<p><img src="/image/linux_cs_3.png" alt="图3"></p>
 
                 
             </div>
@@ -921,7 +922,7 @@ server_addr<span class="token punctuation">.</span>sin_port <span class="token o
                         <div class="article-tag">
                             
                                 <a href="/tags/C/">
-                                    <span class="chip bg-color">-C</span>
+                                    <span class="chip bg-color">C</span>
                                 </a>
                             
                         </div>
@@ -1010,7 +1011,7 @@ server_addr<span class="token punctuation">.</span>sin_port <span class="token o
                 <div class="card-action article-tags">
                     
                     <a href="/tags/C/">
-                        <span class="chip bg-color">-C</span>
+                        <span class="chip bg-color">C</span>
                     </a>
                     
                 </div>
@@ -1267,7 +1268,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">95k</span>
+                        class="white-color">95.2k</span>
             
             
             
